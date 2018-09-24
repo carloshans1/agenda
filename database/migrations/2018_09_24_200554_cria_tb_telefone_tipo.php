@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTbPessoas extends Migration
+class CriaTbTelefoneTipo extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CriaTbPessoas extends Migration
      */
     public function up()
     {
-        Schema::create('pessoas', function (Blueprint $table) {
+        Schema::create('telefone_tipo', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nome', 100);
-            $table->string('endereco', 100);
+            $table->string('tipo');
+            $table->integer('telefone_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CriaTbPessoas extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pessoas');
+        Schema::dropIfExists('telefone_tipo');
     }
 }
