@@ -15,4 +15,5 @@ class Telefone extends Model
     ];
 
     protected $table = 'Telefone';
+    
 }
