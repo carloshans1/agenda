@@ -13,4 +13,5 @@ class Telefone_Tipo extends Model
     ];
 
     protected $table = 'Telefone_Tipo';
+    
 }

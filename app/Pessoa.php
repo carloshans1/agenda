@@ -13,4 +13,5 @@ class Pessoa extends Model
     ];
 
     protected $table = 'pessoa';
+    
 }
