@@ -8,9 +8,7 @@ class Pessoa extends Model
 {
     protected $fillable = [
         'id',
-        'nome',
-        'endereco',
-        'rg'
+        'nome'
     ];
 
     protected $table = 'pessoas';
