@@ -15,6 +15,9 @@ class CriaTbPessoas extends Migration
     {
         Schema::create('pessoas', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome', 100);
+            $table->string('endereco', 100);
+            $table->string('rg', 30);
             $table->timestamps();
         });
     }

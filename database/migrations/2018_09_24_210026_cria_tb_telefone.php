@@ -15,10 +15,8 @@ class CriaTbTelefone extends Migration
     {
         Schema::create('telefone', function (Blueprint $table) {
             $table->increments('id');
-            $table->
             $table->string('ddd', 3);
-            $table->string('fone', 20);
-            $table->string('tipo_id', 50); 
+            $table->string('fone', 20);            
             $table->integer('pessoa_id')->unsigned();
             $table->timestamps();
         });
