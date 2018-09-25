@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CriaTbPessoas extends Migration
+class CriaFkPessoas extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CriaTbPessoas extends Migration
      */
     public function up()
     {
-        Schema::create('pessoas', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('nome', 100);            
-            $table->timestamps();
+        Schema::table('pessoas', function (Blueprint $table) {
+            $table->foreign('id')->references('pessoa_id')->on('telefone')->onDelete('cascade');
         });
     }
 
