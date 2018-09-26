@@ -7,6 +7,19 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Teste</h1>    
+    <h1>Teste</h1> 
+    {{$pessoas}}   
+
+    <br><br>
+    
+    @foreach($pessoas as $pessoa)
+        {{$pessoa->nome}} 
+        <br>
+        @foreach($pessoa->telefone as $telefone)
+            {{$telefone->fone}}
+        @endforeach
+        <br><br>
+    @endforeach
+
 </body>
 </html>
