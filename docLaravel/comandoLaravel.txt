@@ -1,0 +1,66 @@
+Criar LARAVEL na pasta indicada usando COMPOSER
+composer create-project --prefer-dist laravel/laravel 
+
+
+Criar uma model
+php artisan make:model Pessoa
+
+Cria um Migration
+php artisan make:migration cria_tabela_pessoas --create pessoas
+
+Inclui um registro na tabela especifica
+php artisan tinker
+>>> App\Pessoa::create(['nome' => 'Web Verde']);
+
+comando para criar tabela no banco de dados
+php artisan migrate ou
+php artisan migrate <nome da tabela>
+
+campo ID integer
+$table->integer('nome campo')->unsigned();
+Se for chave estrangera (FK)
+$table->foreign('nome campo')->references('id')->on('tabela')->onDelete('cascade');
+
+public function users() {
+	return $this->hasMany(users::class, 'pessoa_id');
+}
+
+
+
+
+*******************
+** TINKER *********
+Duas formas para incluir:
+
+php artisan tinker
+App\Tabela_escolhida::create(['campo' => 'texto a inserir no campo']);
+
+
+1.  App\Pessoa::create(['nome'=>'Sandrinha']);
+
+2.	$user = new App\User;
+	$user->name = "Wruce Bayne";
+	$user->email = "iambatman@savegotham.com";
+	$user->save();
+
+**** EXCLUIR ****
+Para excluir um registro, duas opções:
+
+1º >>> App\Pessoa::find(5)->delete();
+
+   ou
+
+   >>> $user = App\User::find(1);
+   >>> $user->delete();
+
+
+**** Atualização ****
+Duas opções para atualizar:
+
+1º App\Pessoa::find(6)->update(['nome'=>'Super Man']);
+
+2º $r = new Role();
+   $r->update(['id' =>1,'description'=>'manage super privilege']);
+
+
+
