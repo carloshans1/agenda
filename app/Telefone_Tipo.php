@@ -14,8 +14,8 @@ class Telefone_Tipo extends Model
 
     protected $table = 'Telefone_Tipo';
 
-    /* MUITOS telefones para UMA Pessoa*/
-    public function pessoa() {
+    /* UM Tipo Telefone para UM Telefone*/
+    public function telefone() {
         return $this->hasOne(Telefone::class, 'telefone_id');
     }
 }

@@ -14,7 +14,7 @@ class CriaFkPessoas extends Migration
     public function up()
     {
         Schema::table('pessoas', function (Blueprint $table) {
-            $table->foreign('id')->references('pessoa_id')->on('telefone')->onDelete('cascade');
+            //$table->foreign('id')->references('pessoa_id')->on('telefone')->onDelete('cascade');
         });
     }
 
