@@ -60,5 +60,13 @@
 
     <script src="{{ asset('js/app.js') }}"></script>
 
+<!--
+    https://getbootstrap.com.br/docs/4.1/components/navbar/
+    http://www.yeebaplay.com.br/blog/2017/02/como-inserir-cssjs-em-seu-projeto-laravel/
+    https://magazine.softerize.com.br/tutoriais/php/laravel/templates-com-blade-e-bootstrap-laravel
+    Video:
+    https://www.youtube.com/watch?v=uN-etpmWeZk&list=PL_NREvI7nx7t0JZyv4JB4SmGkReVED55x&index=8&t=240s
+-->
+
 </body>
 </html>
