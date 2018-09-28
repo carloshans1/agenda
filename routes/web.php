@@ -15,16 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix'=>'pessoas'], function () {
+Route::group(['prefix' => 'pessoas'], function () {
     Route::get('/', 'PessoasController@index');
 });
 
-//Route::group(['prefix'=>'teste'], function () {
-//    Route::get('/', function () {
-//        return view('teste');
-//    });
-//});
-
-//Route::get('/teste', function () {
-//    return view('teste');
-//});
+Route::get('/layout', function () {
+    return view('layout.padrao');
+});

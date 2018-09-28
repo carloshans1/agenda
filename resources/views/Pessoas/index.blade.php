@@ -44,7 +44,10 @@
         </div>
     </nav>
 
+    <br><br>
+
     <h1>Teste</h1> 
+
     {{$pessoas}}   
 
     <br><br>
@@ -69,4 +72,5 @@
 -->
 
 </body>
+
 </html>
